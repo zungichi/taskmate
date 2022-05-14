@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Login - Taskmate</title>
+{% endblock title %}
+
+{% block content %}
+    <div class = "container">
+        <form method="POST" class="mt-5">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+{% endblock content %}
